@@ -59,7 +59,7 @@ export default function Index() {
             <Icon name="Scissors" className="text-accent" size={28} />
             <span>БАРБЕРШОП</span>
           </div>
-          <div className="hidden md:flex gap-8">
+          <div className="hidden md:flex gap-8 items-center">
             {[
               { id: 'home', label: 'Главная' },
               { id: 'services', label: 'Услуги' },
@@ -76,6 +76,13 @@ export default function Index() {
                 {item.label}
               </button>
             ))}
+            <a
+              href="/analytics"
+              className="text-sm font-medium transition-colors hover:text-accent flex items-center gap-1"
+            >
+              <Icon name="BarChart3" size={16} />
+              Аналитика
+            </a>
           </div>
           <Dialog open={isBookingOpen} onOpenChange={setIsBookingOpen}>
             <DialogTrigger asChild>
